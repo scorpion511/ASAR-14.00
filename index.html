@@ -25,18 +25,33 @@
         margin-top: 20px;
       }
 
-      /* Circular glowing scorpion emblem layout */
+      /* Fixed centering for the exploit panel layout so it clears background store details */
+      .shell {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+        max-width: 400px;
+        z-index: 10;
+      }
+
+      /* Circular glowing scorpion emblem layout - locked dynamically above the left side QR container block */
       .meme {
-        width: 150px;
-        height: 150px;
+        position: fixed;
+        left: 30px;
+        bottom: 230px;
+        width: 120px;
+        height: 120px;
         object-fit: cover;
         border-radius: 50%;
         border: 2px solid #00e5ff;
         box-shadow: 0 0 15px #00e5ff, 
                     0 0 30px #00e5ff, 
                     inset 0 0 15px #00e5ff;
+        z-index: 10000;
         display: block;
-               margin: 150px auto 15px auto;
       }
 
       /* Glowing cyan effect for the bottom byline text */
@@ -45,10 +60,15 @@
         text-shadow: 0 0 10px #00e5ff, 
                      0 0 20px #00e5ff;
         text-align: center;
-        margin-top: 30px;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
         font-size: 18px;          /* Increased font size so it's fully readable */
         font-weight: bold;        /* Makes the font stand out more */
         letter-spacing: 0.05em;   /* Gives the letters a cleaner spacing */
+        z-index: 5;
       }
 
     </style>
@@ -59,9 +79,10 @@
          its last session cannot re-run it unattended. -->
     <div id="brand"><b>ASAR HOST PS4 FIRMWARE 14.00</b></div>
 
-    <div class="shell">
-      <img class="meme" src="logo_scorp.png" alt="" />
+    <!-- Logo element correctly separated here to lock directly above the side block widget panel -->
+    <img class="meme" src="logo_scorp.png" alt="" />
 
+    <div class="shell">
       <main class="panel">
         <p class="lede">PS4 kernel exploit &middot; firmware 13.52 and 14.00</p>
 
