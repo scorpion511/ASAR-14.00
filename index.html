@@ -26,16 +26,16 @@
       }
 
       /* Fixed centering for the exploit panel layout so it clears background store details */
+            /* Fixed layout container without breaking body background image renders */
       .shell {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        margin: 120px auto 0 auto;
         text-align: center;
         width: 100%;
         max-width: 400px;
+        position: relative;
         z-index: 10;
       }
+
 
       /* Circular glowing scorpion emblem layout - locked dynamically above the left side QR container block */
       .meme {
